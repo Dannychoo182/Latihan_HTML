@@ -1,0 +1,16 @@
+/* contoh latihan Box Model */
+
+/* catatan !!!! inline block sperti span dll tidak terlalu bisa di otak atik tidak seperti block yang lain ( div) */
+
+div p {
+  width: 30%;
+  padding: 2em 4em;
+  margin: 1%;
+}
+div p {
+  border-style: dashed;
+  color: green;
+  border-width: 0.5em;
+  border-top-style: double;
+  border-bottom-style: groove;
+}
