@@ -18,3 +18,9 @@ h1 {
 .joke button + p {
   color: green;
 }
+
+/* ini adalah contoh dari selector CSS yang lain yang( ingat jangan di spasi ya sesudah mengetikkan input */
+
+input[type='text'] {
+  color: rgb(207, 25, 140);
+}
