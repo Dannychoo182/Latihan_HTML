@@ -1,4 +1,34 @@
 h1 {
   color: blue;
   font-size: 20px;
+  text-align: center;
+  text-decoration: underline rgb(58, 29, 223);
+}
+
+button {
+  color: rgb(0, 2, 128);
+  background-color: brown;
+}
+
+p {
+  color: white;
+  background-color: grey;
+  line-height: 1.5;
+  letter-spacing: 5px;
+}
+
+/* untuk atribut atau selector ID kita menggunkaan pagar (#) / merujuk ke spesifik, hanya 1 selector saja */
+
+span {
+  color: black;
+}
+
+#list1 {
+  color: red;
+}
+
+/* untuk selector CLASS kita bisa menggunkaan titik ( . ) untuk di awal/ bisa di pakai ke banyak selector */
+
+.contoh {
+  background-color: skyblue;
 }

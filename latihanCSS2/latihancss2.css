@@ -1,0 +1,20 @@
+h1 {
+  text-align: center;
+}
+
+/* ini adalah contoh menggunkaan selector ganda / decendant selector*/
+
+.joke p {
+  color: aqua;
+}
+
+/* contoh direct decendant selector ( memilih selector setelah main selector */
+.joke > p {
+  color: red;
+}
+
+/* contoh adjdecent selector (memilih selector di sebelah selector yang akan kita pilih */
+
+.joke button + p {
+  color: green;
+}
