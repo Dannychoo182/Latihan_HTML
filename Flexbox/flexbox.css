@@ -12,9 +12,44 @@ akan selalu menyesuasikan containernya kalau di bungkus dengan container*/
   border: 5px black;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
+
 #container div {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
+}
+
+/* catatan, kalau mau menggunakan align self harus menggilangkan aling  content terlebih dahulu */
+
+#container div:nth-of-type(1) {
+  align-self: flex-start;
+}
+#container div:nth-of-type(3) {
+  align-self: center;
+}
+#container div:nth-of-type(4) {
+  align-self: flex-end;
+}
+
+/* contoh lagi belajar menyederhanakan sintax dari flexbox */
+
+main {
+  width: 80%;
+  border: 5px solid black;
+  margin: 0 auto;
+  height: 500px;
+  display: flex;
+}
+
+main .sidebar {
+  background-color: blue;
+  flex: 1 2 300px;
+}
+
+main .content {
+  background-color: red;
+  flex: 2 1 600px;
 }
