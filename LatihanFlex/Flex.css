@@ -1,0 +1,150 @@
+html body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #dddd;
+  line-height: 1.5;
+  padding-bottom: 1000px;
+}
+
+.container-satu {
+  display: flex;
+  width: 90%;
+  margin: 2em auto;
+  background-color: #ffff;
+  box-sizing: border-box;
+  padding: 2em;
+}
+
+.main-bar {
+  flex: 2;
+  order: 2;
+}
+
+.sidebar-1 {
+  flex: 1;
+  order: 1;
+}
+.sidebar-2 {
+  flex: 1;
+  order: 3;
+}
+
+/* latihan 2 */
+.container-dua {
+  width: 90%;
+  margin: 2em auto;
+  background-color: #ffff;
+}
+
+.bar-1 {
+  background-color: rgb(213, 131, 131);
+
+  box-sizing: border-box;
+}
+.bar-2 {
+  background-color: rgb(76, 121, 76);
+
+  box-sizing: border-box;
+}
+.bar-3 {
+  background-color: rgb(133, 75, 133);
+
+  box-sizing: border-box;
+}
+
+/* latihan-3 */
+.container-tiga {
+  max-width: 90%;
+  margin: 2em auto;
+  background-color: #ffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galeri img {
+  width: 100%;
+}
+
+.galeri {
+  width: 50%;
+}
+
+/* latihan 4 */
+
+.container-empat {
+  width: 90%;
+  margin: 2em auto;
+  display: flex;
+}
+
+.card {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #ffff;
+  overflow: hidden;
+  margin: 1em;
+}
+
+.card .header {
+  height: 150px;
+  background-color: chocolate;
+}
+
+.card.besar {
+  transform: scale(1.2);
+}
+
+.card .content {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* latihan -5 */
+
+.container-lima {
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  display: flex;
+  margin: 50px auto;
+}
+
+.kotak {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  margin: auto;
+  display: flex;
+  text-align: center;
+}
+
+.kotak span {
+  margin: auto;
+}
+/* media querry */
+
+@media (min-width: 600px) {
+  .container-dua {
+    display: flex;
+    justify-content: space-between;
+  }
+  .bar-1 {
+    width: 30%;
+  }
+  .bar-2 {
+    width: 30%;
+  }
+  .bar-3 {
+    width: 30%;
+  }
+
+  /* latihan-3 */
+  .galeri {
+    width: 25%;
+  }
+}
