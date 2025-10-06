@@ -209,6 +209,8 @@
 
       // console.log(shoppingCart[1].price);
 
+      // ini adalah perulangan (for)
+
       // for (let i = 1; i <= 10; i++) {
       //   console.log(i);
       // }
@@ -219,11 +221,159 @@
       //   console.log(i);
       // }
 
-      const animals = ['koala', 'rubah', 'kambing', 'burung', 'komodo'];
+      // const animals = ['koala', 'rubah', 'kambing', 'burung', 'komodo'];
 
-      for (let i = 0; i < animals.length; i++) {
-        console.log(i, animals[i]);
-      }
+      // for (let i = 0; i < animals.length; i++) {
+      //   console.log(i + 1, animals[i]);
+      // }
+
+      // const pilihan = 'abcd';
+
+      // for (let i = 1; i <= 10; i++) {
+      //   console.log(`${i}.soal nomor ${i}:`);
+      //   for (let j = 0; j < pilihan.length; j++) {
+      //     console.log(`    ${pilihan[j]}. pilihan jawaban`);
+      //   }
+      // }
+
+      // const strk = 'LOL';
+
+      // for (let i = 1; i <= 10; i++) {
+      //   console.log('outer:', i);
+      //   for (j = 0; j < strk.length; j++) console.log('      inner : ', strk[j]);
+      // }
+
+      // menganbil data dari nested array dengan pengulangan (for)
+
+      // const studentRow = [
+      //   ['olivia', 'liam', 'eve', 'adam'],
+      //   ['kadek', 'novi', 'edi', 'ronggo'],
+      //   ['mela', 'adit', 'sanjaya', 'katak'],
+      // ];
+
+      // for (let i = 0; i < studentRow.length; i++) {
+      //   const urutan = studentRow[i];
+      //   console.log(`Seat row : ${i + 1}`);
+      //   for (let j = 0; j < urutan.length; j++) console.log(`   ${urutan[j]}`);
+      // }
+
+      // contoh penggunaan while
+
+      // const password = 'Pass123';
+
+      // let guest = prompt('enter the password');
+      // while (guest !== password) guest = prompt('password anda salah');
+      // alert('password anda benar');
+
+      // salah satu cara menggunkaan while ( pengulangan)
+
+      // let input = prompt('say somthing');
+      // while (true) {
+      //   input = prompt(input);
+      //   if (input === 'hallo') break;
+      // }
+      // alert('ok lets go');
+
+      // contoh study kasus membuat aplkikasi tebak angka
+
+      // 1) Minta maksimal yang valid (angka bulat > 0)
+      // let maximum = parseInt(prompt('Masukkan nilai maksimal (angka > 0):'), 10);
+
+      // while (Number.isNaN(maximum) || maximum <= 0) {
+      //   // Jika input tidak valid, minta lagi
+      //   maximum = parseInt(prompt('Input tidak valid. Masukkan angka maksimal (lebih dari 0):'), 10);
+      // }
+
+      // // 2) Pilih angka acak dari 1..maximum
+      // const targetNum = Math.floor(Math.random() * maximum) + 1;
+      // console.log('DEBUG: targetNum =', targetNum);
+
+      // // 3) Minta tebakan pertama (validasi input)
+      // let guess = parseInt(prompt('Isi tebakan pertama kamu (angka):'), 10);
+
+      // // Jika input pertama tidak valid, minta sampai valid
+      // while (Number.isNaN(guess)) {
+      //   guess = parseInt(prompt('Input tidak valid. Masukkan angka tebakan:'), 10);
+      // }
+
+      // let attempts = 1; // hitung percobaan
+
+      // // 4) Loop sampai benar
+      // while (guess !== targetNum) {
+      //   attempts++;
+
+      //   if (guess > targetNum) {
+      //     guess = parseInt(prompt('Terlalu tinggi! Tebak lagi:'), 10);
+      //   } else {
+      //     guess = parseInt(prompt('Terlalu rendah! Tebak lagi:'), 10);
+      //   }
+
+      //   // jika user memasukkan sesuatu yang bukan angka, minta lagi
+      //   while (Number.isNaN(guess)) {
+      //     guess = parseInt(prompt('Input tidak valid. Masukkan angka tebakan:'), 10);
+      //   }
+      // }
+
+      // // 5) Sukses
+      // alert(`Selamat! Tebakan Anda benar: ${targetNum}\nTotal percobaan: ${attempts}`);
+
+      // sintax unutuk pengulangan for yang lebih sederhana dengan menggunkaan (for of)
+
+      // const fruits = ['semangka', 'apel', 'nanas'];
+      // for (let i = 0; i <= fruits.length; i++) {
+      //   console.log(`buah : ${fruits[i]}`);
+      // }
+
+      // menjadi
+
+      // for (fruit of fruits) {
+      //   console.log(`buah ${fruit}`);
+      // }
+
+      const studentScore = {
+        andi: 20,
+        budi: 30,
+        revan: 40,
+        aldi: 20,
+        komang: 80,
+        cumi: 90,
+      };
+      // jika object pakai inn
+
+      // for (student in studentScore) {
+      //   console.log(`${student} memiliki score ${studentScore[student]}`);
+      // }
+
+      // let total = 0;
+      // let scores = Object.values(studentScore);
+      // for (let score of scores) {
+      //   total += score;
+      // }
+      // console.log(total / scores.length);
+
+      // belajar dasar function
+
+      // function selamatPagi(name) {
+      //   console.log(`hallo, ${name} selamat pagi`);
+      // }
+      // selamatPagi(`elice`);
+
+      // cnotoh multiple function
+
+      //   function nomor(a, b) {
+      //     const total = a + b;
+      //     console.log(total);
+      //   }
+      //   nomor(3, 4);
+
+      // mengenal return pada function
+
+      // function jumlahkan(a, b) {
+      //   if (typeof a !== 'number' || typeof b !== 'number') {
+      //     return 'bukan angka';
+      //   }
+      //   return a + b;
+      // }
     </script>
   </body>
 </html>
