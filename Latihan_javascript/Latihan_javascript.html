@@ -330,14 +330,14 @@
       //   console.log(`buah ${fruit}`);
       // }
 
-      const studentScore = {
-        andi: 20,
-        budi: 30,
-        revan: 40,
-        aldi: 20,
-        komang: 80,
-        cumi: 90,
-      };
+      // const studentScore = {
+      //   andi: 20,
+      //   budi: 30,
+      //   revan: 40,
+      //   aldi: 20,
+      //   komang: 80,
+      //   cumi: 90,
+      // };
       // jika object pakai inn
 
       // for (student in studentScore) {
@@ -374,6 +374,67 @@
       //   }
       //   return a + b;
       // }
+
+      //  var   =  bersifat general bisa diakses tanpa peduli batasan atau scope
+      // let    = tidak bisa di akses sembarangan tetapi nilainya bisa di ubah, sering di gunakan        dalam array atau object
+      // const  =  tidak bisa di akses sembarangan dan juga nilainya constant ( tidak bisa di ubah )
+
+      // contoh function lexial (function di dalam function)
+
+      // function lamarKerja() {
+      //   const jabatan = 'programer';
+      //   const pro = 'handal';
+
+      //   function orangDalam() {
+      //     let kenalan = `bisa memasukkan ${jabatan}`;
+      //     console.log(kenalan);
+      //   }
+
+      //   function orangLuar() {
+      //     let kenalanDalam = `kmau bisa jadi programer ${pro}`;
+      //     console.log(kenalanDalam);
+      //   }
+      //   orangLuar();
+      //   orangDalam();
+      // }
+      // lamarKerja();
+
+      // contoh function expretion
+
+      // const belajar = function (a, b) {
+      //   return a * b;
+      // };
+      // console.log(belajar(4, 10));
+
+      // function sebagai argument
+
+      //   function duaKali(func) {
+      //     func();
+      //     func();
+      //   }
+
+      //   function lemparDadu() {
+      //     const hasil = Math.floor(Math.random() * 6) + 1;
+      //     console.log(hasil);
+      //   }
+      //   duaKali(lemparDadu);
+
+      // function bernilai balik function
+
+      // function hasilnyaFunction() {
+      //   const rand = Math.random();
+
+      //   if (rand > 0.5) {
+      //     return function () {
+      //       console.log('nilainya lebih besar');
+      //     };
+      //   } else {
+      //     return function () {
+      //       console.log('maaf nilainya lebih rendah');
+      //     };
+      //   }
+      // }
+      // hasilnyaFunction()();
     </script>
   </body>
 </html>
