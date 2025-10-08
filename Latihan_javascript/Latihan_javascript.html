@@ -435,6 +435,194 @@
       //   }
       // }
       // hasilnyaFunction()();
+
+      // ini adalah method
+
+      //   const perkalian = {
+      //     mymath: function (x, y) {
+      //       return x * y;
+      //     },
+      //   };
+      //   console.log(perkalian.mymath(4, 5));
+
+      // this adalah keyword yang sakti
+
+      // let saya = {
+      //   nama: 'deny',
+      //   hobi: 'ngentot',
+      //   kenalan: function () {
+      //     return `hallo nama saya ${this.nama} hobi saya ${this.hobi} sama kamu`;
+      //   },
+      // };
+      // console.log(saya.kenalan());
+
+      // latihan menggunkaan forEach
+
+      // const anime = [
+      //   { tittle: 'naruto', rating: 80 },
+      //   { tittle: 'blach', rating: 90 },
+      //   { tittle: 'titan', rating: 75 },
+      // ];
+
+      // anime.forEach(function (anime) {
+      //   console.log(`nama anime: ${anime.tittle} rating: ${anime.rating}/100`);
+      // });
+
+      // contoh lagi
+
+      // const makanan = [
+      //   { nama: 'nasi goreng', harga: 10000 },
+      //   { nama: 'mie goreng', harga: 5000 },
+      //   { nama: 'sate kambing', harga: 20000 },
+      // ];
+
+      // makanan.forEach(function (makanan) {
+      //   console.log(`Menu: ${makanan.nama} - harga: ${makanan.harga}`);
+      // });
+
+      // ccontoh menggunkaan method (Map)
+
+      // const angka = [1, 2, 3, 4, 5, 6, 7, 8];
+      // const angkaDouble = angka.map(function (numb) {
+      //   return numb * 2 * 2;
+      // });
+
+      // console.log(angka);
+      // console.log(angkaDouble);
+
+      // const anime = [
+      //   { tittle: 'naruto', rating: 80 },
+      //   { tittle: 'blach', rating: 90 },
+      //   { tittle: 'titan', rating: 75 },
+      // ];
+
+      // const animeList = anime.map(function (movies) {
+      //   return movies.tittle.toUpperCase();
+      // });
+
+      // console.log(anime);
+      // console.log(animeList);
+
+      // belajar tentang (arrow function)
+
+      // const random = () => {
+      //   return Math.floor(Math.random() * 100);
+      // };
+      // console.log(random());
+
+      // const angka = () => {
+      //   let number = Math.floor(Math.random() * 100) + 1;
+      //   if (number > 50) {
+      //     return `angka kamu lebih besar dari 50`;
+      //   } else {
+      //     return `angka kamu lebih kecil`;
+      //   }
+      // };
+      // console.log(angka());
+
+      // contoh implisit dari arrow functio(mempermudah sintax)
+
+      // const randoms = () => Math.floor(Math.random() * 100);
+      // console.log(randoms());
+
+      // belajar setTimeout
+
+      // console.log('hallo');
+      // setTimeout(() => {
+      //   console.log('crooott');
+      // }, 3000);
+
+      // belajar setInterval
+
+      //   const inter = setInterval(() => {
+      //     console.log('hallo nama saya deny');
+      //   }, 3000);
+      //   clearInterval(inter);
+      //
+
+      // const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+      // let angkaGanjil = angka.filter((n) => {
+      //   return n % 2 === 1;
+      // });
+      // console.log(angkaGanjil);
+      // console.log(angka);
+
+      // contoh membuat method filtering
+
+      // const anime = [
+      //   { tittle: 'naruto', rating: 80, years: 2020 },
+      //   { tittle: 'blach', rating: 90, years: 2021 },
+      //   { tittle: 'titan', rating: 75, years: 2015 },
+      //   { tittle: 'pokemon', rating: 82, years: 2015 },
+      // ];
+
+      // const animeBagus = anime.filter((anime) => anime.rating >= 85);
+      // const animeBaru = anime.filter((anime) => anime.years > 2016);
+
+      // // kita juga bisa mapping
+
+      // const judulAnimeBagus = animeBagus.map((anime) => anime.tittle);
+      // {
+      //   console.log(judulAnimeBagus);
+      // }
+
+      // belajar method (every)
+
+      // const angka = [60, 70, 80, 90, 100];
+      // const setiapAngka = angka.every((num) => num >= 60);
+      // {
+      //   console.log(setiapAngka);
+      // }
+
+      // belajar method (some)
+
+      // const angka = [60, 70, 80, 90, 100];
+      // const setiapAngka = angka.some((num) => num >= 70);
+      // {
+      //   console.log(setiapAngka);
+      // }
+
+      // belajar reduce
+
+      // const angka = [60, 70, 80, 90, 100];
+      // const total = angka.reduce((total, score) => {
+      //   return total + score;
+      // });
+      // console.log(total);
+
+      // const angka = [60, 70, 80, 90, 100];
+
+      // const urut = Math.max(...angka);
+      // console.log(urut);
+      // console.log(...angka);
+
+      // belajar merge array gampang dengan spread (. . .)
+
+      // const angka = [60, 70, 80, 90, 100];
+
+      // const nama = ['deny', 'choo', 'nana', 'elsa'];
+
+      // const kumpulan = [...angka, ...nama, 'chocho'];
+      // console.log(kumpulan);
+
+      // const anime = { tittle: 'naruto', rating: 80, years: 2020 };
+
+      // const animeBaru = { ...anime, id: 123 };
+      // console.log(animeBaru);
+
+      // bongkarr nilai array ke masing masing variable
+
+      // const nama = ['deny', 'choo', 'nana', 'elsa', 'wahyu', 'lumia'];
+
+      // const [gold, silver, bronze, ...peserta] = nama;
+      // console.log(bronze);
+
+      // cara lebih gampang pakai (destructing)
+
+      // const anime = { tittle: 'naruto', rating: 80, years: 2020 };
+      // const { tittle, rating, years } = anime;
+      // console.log(rating);
     </script>
   </body>
 </html>
