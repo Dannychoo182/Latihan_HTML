@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>belajar JS OOP</title>
+  </head>
+  <body>
+    <script>
+      // latihan soal
+      // membuat calculator sederhana
+
+      // let angka1 = parseFloat(prompt('masukkan angka pertama'));
+      // let operator = prompt('masukkan +,*,-,/');
+      // let angka2 = parseFloat(prompt('masukkan angka ke dua'));
+
+      // let hasil;
+
+      // if (operator === '+') {
+      //   hasil = angka1 + angka2;
+      // } else if (operator === '*') {
+      //   hasil = angka1 * angka2;
+      // } else if (operator === '-') {
+      //   hasil = angka1 - angka2;
+      // } else if (operator === '/') {
+      //   if (angka2 === 0) {
+      //     hasil = 'error bang coba lagi';
+      //   } else hasil = angka1 / angka2;
+      // } else {
+      //   hasil = 'hasil tidak diketahui';
+      // }
+
+      // console.log(`hasil: ${hasil}`);
+
+      // latihan soal ke dua
+
+      // let angkaRahasia = Math.floor(Math.random() * 10) + 1;
+
+      // let kesempatan = 3;
+
+      // while (kesempatan > 0) {
+      //   let tebakan = parseInt(prompt('tebak angka dari 1 sampai 10'));
+
+      //   if (tebakan === angkaRahasia) {
+      //     console.log('selamat anda benar');
+      //     break;
+      //   } else if (tebakan > angkaRahasia) {
+      //     console.log('angka anda terlalu tinggi');
+      //   } else if (tebakan < angkaRahasia) {
+      //     console.log('angka anda teralu rendah');
+      //   } else {
+      //     console.log('hasil tidak diketahui');
+      //   }
+
+      //   kesempatan--;
+
+      //   if (kesempatan === 0) {
+      //     console.log('kesempatan anda habis');
+      //   }
+      // }
+
+      // 1. javascript runtime adalah lingkungan yang menjalankan javascript , contoh browser, node
+
+      // 2. browser ajvascript berjalan di bagian front atau depan node.js berjalan di bagian belakang, backend
+      // 3.karena adanya event loop, callback queque dan juga web APIs
+      // 4.mekanisme agar javascript bisa menangani async tanpa blocking
+
+      // 5.var  = scope = function (), bisa reassign( ubah nilai), bisa redeclare(buat ulang nama variable yang sama)
+      // let = scope = block, bisa reassign( ubah nilai), tidak redeclare(buat ulang nama variable yang sama)
+      // const = blcok, tidak reassign( ubah nilai), tidak redeclare(buat ulang nama variable yang sama)
+
+      // 6. let x;
+      // console.log(typeof x);
+      // hasilnya = undefined;
+
+      // 7.const person = { name: 'Danny' };
+      // person.name = 'John';
+      // console.log(person.name); hasilnya = john
+
+      // 8.null adalah object kosong yang sengaja di buat
+      //   undefined adalah variebel yang belum di definisikan
+
+      // 9.let a = 5;
+      //   let b = '5';
+      //   console.log(a == b);
+      //   console.log(a === b);
+      //  1.hasilnya = true
+      //  2.hasilnya = false
+
+      //  10.operator && artinya dan (akan bernilai true atau di eksekusi bila kedua konsidi bernilai true)
+      //     operaetor  || artinya OR (akan bernilai true kalau salah satu dari konsidi tersebut bernilai true contoh( false || true = true))
+      //     operator ! artinya not (akan bernilai sebaliknya nya contoh !false = true)
+
+      // 11. let x = 10;
+      // let y = 5;
+      // console.log(x > y && y < 3);
+      // kondisi di atas bernilai true && false = false
+      // jawabannya adalah false
+
+      // 12.let value = '10';
+      // value = value * 2;
+      // value = value + '5';
+      // console.log(value);
+      // hasilnya = `205` berbentuk String
+
+      // 13. if = menjalankan code jika kondisi bernilai true
+      //     else if = menentukan 2 kemungkinan hasil
+      //     switch = alternatif if untuk kondisi berdasarkan  nilai yang pasti
+
+      // 14.let color = 'red';
+
+      // switch (color) {
+      //   case 'blue':
+      //     console.log('Laut');
+      //     break;
+      //   case 'red':
+      //     console.log('Api');
+      //     break;
+      //   default:
+      //     console.log('Tidak diketahui');
+      // }
+      //    hasilnya adalah = api
+
+      // 15. let nilai = parseFloat(prompt('masukkan nilai anda'));
+
+      // if (nilai > 70) {
+      //   console.log('anda lulus');
+      // } else {
+      //   console.log('anda gagal');
+      // }
+
+      // 16. for = digunakan untuk ketika kita tahu berapa kali kita akan melakukan pengulangan
+      //     while = digunakan ketika kita belum tahu pasti berapakali kita akan melakukan pengulangan
+      //     do while = mirip while tetapi selalu dijalankan sekali mesipun kondsisi pertama false
+
+      // 17.for (let i = 1; i <= 3; i++) {
+      //   console.log('Belajar ke-', i);
+      // }
+      // hasilnya adalah
+      // Belajar ke-1
+      // Belajar ke-2
+      // Belajar ke-3
+
+      // 18.for of = digunakan untuk mengambil nilai dari array atau String
+      //    for in = dingunakan untuk mengambil property(key) dari object
+
+      // 19. let buah = ['apel', 'pisang', 'mangga'];
+      // for (let b of buah) {
+      //   console.log(b);
+      // }hasilnya adalah
+      // apel
+      // pisang
+      // mangga
+
+      // 20.karea fungsi dari Math.floor adalah untuk mengubah bilangan decimal ke bilangan bulat, sedangkan Math.random()bergungsi untuk memberikan nilali acak decimal dari 0 sampai 1
+
+      // 1. const greet = (name) => {
+      //   return `Halo, ${name}!`;
+      // };
+
+      // console.log(greet('Danny'), `selamat belajar javascript`); // Output: Halo, Danny!
+
+      // 2. const kali = function (a, b) {
+      //   return a * b;
+      // };
+      // console.log(kali(5, 6));
+      // function tidak bisa di panggil sebelum di deklarasikan
+
+      // 3. const sapaPagi = (nama) => `hallo ${nama}!`;
+
+      // console.log(sapaPagi('danny'), 'selamat balajar hari ini');
+
+      // 4.let x = 10;
+
+      // function test() {
+      //   let y = 5;
+      //   console.log(x + y);
+      // }
+
+      // test();
+      // console.log(y);
+      // hasilnya adalah = 15
+      // karena console.log(y) di dalam scope lokal, undefine
+
+      // 5. function hitung() {
+      //   let angka = 10;
+
+      //   function tambahSatu() {
+      //     angka = angka + 1;
+      //     return angka;
+      //   }
+      //   console.log(tambahSatu());
+      // }
+      // console.log(hitung());
+    </script>
+  </body>
+</html>
