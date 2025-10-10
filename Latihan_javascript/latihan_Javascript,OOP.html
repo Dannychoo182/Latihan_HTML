@@ -192,6 +192,308 @@
       //   console.log(tambahSatu());
       // }
       // console.log(hitung());
+
+      // 1. const kali = function (a, b) {
+      //   return a * b;
+      // };
+      // console.log(kali(2, 5));
+      // bisa di panggil sebelum deklarasi
+
+      //  2. const kali = function (a, b) {
+      //     return a - b;
+      //   };
+      //   console.log(kali(10, 4));
+      //   console.log(kali(7, 12));
+      //   function expretion tidak bisa di panggil sebelum deklarasi
+
+      // 3. let volumeKubus = (sisi) => {
+      //   return sisi * sisi * sisi;
+      // };
+      // console.log(volumeKubus(3));
+      // console.log(volumeKubus(5));
+
+      // 4.let a = 5;
+
+      // function cobaScope() {
+      //   let b = 10;
+      //   if (true) {
+      //     let c = 20;
+      //     var d = 25;
+      //     console.log(a + b + c + d); // Line X
+      //   }
+      //   console.log(a + b + c + d); // Line Y
+      // }
+
+      // console.log(cobaScope());
+
+      // 1. 60
+      // 2. error, karena pengkondisian if
+
+      //  1. const kuadrat = (x) => {
+      //     return x * x;
+      //   };
+      //   console.log(kuadrat(3));
+      //   console.log(kuadrat(7));
+
+      // 2.const buatUser = (name, age) => ({ name: name, age: age });
+      // console.log(buatUser('Danny', 20));
+
+      // 3.const hallo = () => 'JavaScript itu keren!';
+      // console.log(hallo());
+
+      // 5. const user = {
+      //   name: 'danny',
+      //   greet: function () {
+      //     setTimeout(() => {
+      //       console.log(`hallo ${this.name}!`);
+      //     }, 1000);
+      //   },
+      // };
+      // user.greet();
+
+      //   1,hallo danny,
+      //   2. danny, karena function yang pertama mengambil nilai dari variabel global,
+      //   sedangkan no 2 mengambil nilai dari variabel global sanjaya
+
+      //   2.hasinya 1. 20 dan yang kedua error
+      //    kenapa? karena yang kedua mengambil nilai ke scope lokal makanya error harusnya ke scope global
+
+      //   3. yang error adalah yang kedua karena var bisa memiliki ciri ciri global scope sedangkan let dan const tidak, mereka block scope
+
+      //  4. let a = 3;
+
+      //   function luar() {
+      //     let b = 4;
+
+      //     function dalam() {
+      //       let c = 5;
+      //       console.log(a + b + c);
+      //     }
+
+      //     dalam();
+      //     console.log(a + b);
+      //   }
+
+      //   luar();
+      //   console.log(a);
+
+      //   12
+      //   7
+      //   3
+      //   kenapa? karena c berada di dalam scope lokal makanya tidak bisa di akses, sedangkan yang lain tidak
+
+      // 5. yang eror adalah a dan b sedangkan c tidak
+      // karena let dan const memiliki ciri ciri block scope sedangkan var tidak, ia global scope
+
+      //    1. undefined
+      //     danny
+      //     kenapa> karena yang pertama harus di deklarasi terlebih dahulu sedangkan yang kedua sudah memiliki variable yang di deklarasi
+
+      //   2. keduanya error, tidak bisa akses umur sebelum di initialisasi
+
+      //    3.hasilnya hallo danny, jadi bisa di panggil karena gunction declarasi di hoist bersama dengan isinya
+
+      //   4. jawabannya error,
+
+      //  5. hasilnya, halo dari fungsi a, karena mengambil nilai dari scope global (a)
+
+      // function hitungTotal(...angka) {
+      //   let total = 0;
+      //   for (let num of angka) {
+      //     total += num;
+      //   }
+      //   console.log(`total: ${total}`);
+      // }
+      // hitungTotal(2, 4, 77, 8, 9);
+
+      // 1.function greet(name = 'Anonim') {
+      //   console.log(`Halo ${name}!`);
+      // }
+
+      // greet();
+      // greet('Danny');
+      // hasilnya
+      // Halo Anonim!
+      // Halo Danny!
+
+      // 2.function tambah(a = 10, b) {
+      //   console.log(a + b);
+      // }
+
+      // tambah(undefined, 5);
+      // tambah(3, 7);
+      // hasilnya;
+      // 15;
+      // 10;
+      // kenapa karena 3 + 7  = 10 dan 10 + 5 = 15
+
+      // 3.function hitung(...angka) {
+      //   let total = 0;
+      //   for (let i of angka) total += i;
+      //   console.log(total);
+      // }
+
+      // hitung(2, 4);
+      // hitung(1, 2, 3, 4);
+
+      // jasilnya 6 dan 10
+
+      // 4.function tampilkan(greeting = 'Hai', ...nama) {
+      //   for (let n of nama) {
+      //     console.log(`${greeting}, ${n}!`);
+      //   }
+      // }
+
+      // tampilkan('Halo', 'Danny', 'Budi');
+      // tampilkan(undefined, 'Tina', 'Cici');
+      // hasilnya
+      // halo Danny!
+      // halo Budi!
+      // halo tina!
+      // halo cici!
+
+      //   5. function dataSiswa(nama, ...nilai) {
+      //     console.log(`${nama} mendapat nilai: ${nilai}`);
+      //   }
+
+      //   dataSiswa('Danny', 90, 85, 88);
+
+      //   hsailnya = Danny mendapat nilai: 90,85,88
+
+      // function buatAkun() {
+      //   let saldo = 0; // private variable
+
+      //   return {
+      //     deposit: function (uang) {
+      //       saldo += uang;
+      //       console.log(`Saldo sekarang: ${saldo}`);
+      //     },
+      //     cekSaldo: function () {
+      //       console.log(`Saldo kamu: ${saldo}`);
+      //     },
+      //   };
+      // }
+
+      // const akunDanny = buatAkun();
+      // akunDanny.deposit(1000); // Saldo sekarang: 1000
+      // akunDanny.deposit(500); // Saldo sekarang: 1500
+      // akunDanny.deposit(500);
+      // akunDanny.cekSaldo(); // Saldo kamu: 1500
+
+      // 1.function buatHitung() {
+      //   let count = 0;
+      //   return function () {
+      //     count++;
+      //     console.log(count);
+      //   };
+      // }
+
+      // const hitung = buatHitung();
+      // hitung();
+      // hitung();
+      // hitung();
+      // hasilnya:
+      // 1
+      // 2
+      // 3
+      // karena count ++
+
+      // 2.function salam(nama) {
+      //   return function () {
+      //     console.log(`Halo ${nama}`);
+      //   };
+      // }
+
+      // const sapa1 = salam('Danny');
+      // const sapa2 = salam('Budi');
+
+      // sapa1();
+      // sapa2();
+
+      // Halo Danny
+      // Halo Budi
+      // karena memiliki 2 variable sapa1 dan sapa2
+
+      // function counterRahasia() {
+      //   let nilai = 5;
+      //   return {
+      //     tambah: function () {
+      //       nilai++;
+      //       console.log(nilai);
+      //     },
+      //     kurang: function () {
+      //       nilai--;
+      //       console.log(nilai);
+      //     },
+      //   };
+      // }
+
+      // const c = counterRahasia();
+      // c.tambah();
+      // c.kurang();
+      // console.log(c.nilai);
+
+      // let bonus = 100;
+      // function buatPegaawai(nama) {
+      //   let gaji = 1000;
+      //   return function () {
+      //     console.log(`${nama} total: ${gaji + bonus}`);
+      //   };
+      // }
+      // const pegawai1 = buatPegaawai('danny');
+      // const pegawai2 = buatPegaawai('andi');
+
+      // pegawai1();
+      // bonus = 500;
+      // pegawai2();
+
+      // function halo(nama) {
+      //   console.log(`nama, ${nama}`);
+      // }
+      // function prucedure(callback) {
+      //   let user = 'danny';
+      //   callback(user);
+      // }
+      // prucedure(halo);
+
+      // 1.const angka = [1, 2, 3, 4, 5];
+      // const ribuan = angka.map((n) => n * 10000);
+
+      // console.log(ribuan);
+
+      // 2. const usia = [12, 18, 22, 27, 15, 30];
+      // const umur = usia.filter((n) => n >= 18);
+
+      // console.log(umur);
+
+      // 3.const siswa = [
+      //   { nama: 'Budi', nilai: 75 },
+      //   { nama: 'Siti', nilai: 90 },
+      //   { nama: 'Andi', nilai: 60 },
+      // ];
+
+      // const nilai = siswa.find((siswa) => siswa.nilai > 80);
+      // console.log(nilai);
+
+      // 4.const pengeluaran = [500, 750, 300, 450];
+      // const total = pengeluaran.reduce((a, b) => a + b);
+      // console.log(total);
+
+      // const produk = [
+      //   { nama: 'Kaos', harga: 50000 },
+      //   { nama: 'Celana', harga: 80000 },
+      //   { nama: 'Topi', harga: 30000 },
+      //   { nama: 'Jaket', harga: 120000 },
+      // ];
+
+      // const hargas = produk.filter((n) => n.harga > 50000);
+      // console.log(hargas);
+
+      // const nameProduk = hargas.map((j) => j.nama);
+      // console.log(nameProduk);
+
+      // const total = hargas.reduce((acc, curr) => acc + curr.harga, 0);
+      // console.log(total);
     </script>
   </body>
 </html>
