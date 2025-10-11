@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>belajar JS OOP</title>
+    <title>belajar JS lanjutan</title>
   </head>
   <body>
     <script>
@@ -494,6 +494,297 @@
 
       // const total = hargas.reduce((acc, curr) => acc + curr.harga, 0);
       // console.log(total);
+
+      // 1.const buku = {
+      //   judul: 'akademi crypto',
+      //   penulis: 'kalimasada',
+      //   tahun: 2023,
+      // };
+      // console.log(buku);
+      // console.log(buku.judul);
+
+      // 2.const buku = {
+      //   judul: 'akademi crypto',
+      //   penulis: 'kalimasada',
+      //   tahun: 2023,
+      //   info() {
+      //     return `buku ini berjudul ${this.judul} ditulis oleh ${this.penulis}`;
+      //   },
+      // };
+      // console.log(buku.info());
+
+      // 3.const mahasiswa = {
+      //   nama: 'danny',
+      //   umur: 20,
+      //   alamat: {
+      //     jalan: 'jalan raya kesambi',
+      //     kota: 'badung',
+      //     provinsi: 'jawa barat',
+      //   },
+      // };
+      // console.log(mahasiswa.alamat.kota);
+
+      // 4. const mahasiswa = {
+      //   nama: 'danny',
+      //   umur: 20,
+      //   alamat: {
+      //     jalan: 'jalan raya kesambi',
+      //     kota: 'badung',
+      //     provinsi: 'jawa barat',
+      //   },
+      // };
+      // mahasiswa.alamat.provinsi = 'bali';
+      // console.log(mahasiswa.alamat.provinsi);
+
+      // const daftarSiswa = [
+      //   { nama: 'sudin', umur: 30, kelas: '3a' },
+      //   { nama: 'rahmat', umur: 29, kelas: '3a' },
+      //   { nama: 'jodi', umur: 17, kelas: '3a' },
+      // ];
+      // console.log(daftarSiswa[1]);
+      // // atau yang kedua maksud mu dari array 0 yaitu
+      // console.log(daftarSiswa[2]);
+
+      // 1. const film = {
+      //   judul: 'naruto',
+      //   sutradara: 'danny',
+      //   tahun: 2021,
+      // };
+      // const { judul, sutradara, tahun } = film;
+
+      // console.log(judul, sutradara, tahun);
+
+      // 2.const siswa = { nama: 'Budi', nilai: 85 };
+
+      // const { nama: stundentName, nilai: score } = siswa;
+      // console.log(stundentName, score);
+
+      // 3.const pegawai = {
+      //   nama: 'andi',
+      //   umur: 20,
+      //   alamat: {
+      //     kota: 'denpasar',
+      //     provinsi: 'bali',
+      //   },
+      // };
+      // const {
+      //   alamat: { kota, provinsi },
+      // } = pegawai;
+      // console.log(kota);
+
+      // 4.const angka = [10, 20, 30, 40];
+      // const [pertama, , , keempat] = angka;
+      // console.log(pertama, keempat);
+
+      // 5.const produk = [
+      //   { nama: 'Laptop', harga: 10000000 },
+      //   { nama: 'Mouse', harga: 200000 },
+      // ];
+
+      // const [produk1, produk2] = produk;
+      // console.log(produk1.nama);
+      // console.log(produk2.harga);
+
+      // const buah = ['apel', 'pisang', 'mangga'];
+
+      // buah.forEach((item, index) => {
+      //   console.log(`${(index = 'nama' + '' + 'buah')} ${item}`);
+      // });
+
+      // const nilai = [60, 80, 45, 90];
+      // const lulus = nilai.some((n) => n >= 70);
+      // {
+      //   console.log(lulus);
+      // }
+
+      // const nilai = [60, 80, 45, 90];
+
+      // const angka = nilai.every((n) => n >= 70);
+      // {
+      //   console.log(angka);
+      // }
+
+      // const angka = [60, 80, 45, 90];
+      // angka.sort((a, b) => a - b);
+      // {
+      //   console.log(angka);
+      // }
+      // angka.reverse();
+      // console.log(angka);
+
+      // 1.const angka1 = [1, 2, 3];
+      // const angka2 = [4, 5, 6];
+
+      // const tampilkanAngka = [...angka1, ...angka2];
+      // console.log(tampilkanAngka);
+
+      // 2.const buah = ['apel', 'pisang', 'mangga'];
+      // const salinBuah = [...buah];
+
+      // salinBuah.push('anggur');
+      // {
+      //   console.log(buah);
+      //   console.log(salinBuah);
+      // }
+
+      // 3.const user = { nama: 'Danny', umur: 20 };
+      // const info = { hobi: 'ngoding', kota: 'Badung' };
+
+      // const dataLengkap = { ...user, ...info };
+      // console.log(dataLengkap);
+
+      // 4.function jumlahkan(...angka) {
+      //   return angka.reduce((a, b) => a + b, 0);
+      // }
+      // console.log(jumlahkan(2, 4, 6, 8));
+
+      // 5.const angka = ([a, b, ...sisa] = [10, 20, 30, 40, 50]);
+      // console.log(a);
+      // console.log(b);
+      // console.log(...sisa);
+
+      // 6.function tampilkanData(nama, ...hobi) {
+      //   return `hallo ${nama} hobimu adalah: ${hobi}`;
+      // }
+      // console.log(tampilkanData('danny', 'ngoding', 'makan', 'membaca'));
+
+      // const angka = [20, 30, 40, 50];
+      // const bilangan = angka.findIndex((n) => n === 40);
+      // {
+      //   console.log(bilangan);
+      // }
+
+      // 1.const daftarSiswa = [
+      //   { nama: ' andy', nilai: 70 },
+      //   { nama: 'sony', nilai: 40 },
+      //   { nama: 'budy', nilai: 60 },
+
+      //   { nama: 'alex', nilai: 85 },
+      //   { nama: 'sonia', nilai: 100 },
+      // ];
+
+      // const nilaiMurid = daftarSiswa.filter((n) => n.nilai >= 80);
+      // console.log(nilaiMurid);
+
+      // const urutkan = nilaiMurid.sort((a, b) => a - b);
+      // console.log(urutkan);
+
+      // urutkan.reverse();
+      // console.log(urutkan);
+
+      // const namaMurid = nilaiMurid.map((n) => n.nama);
+      // console.log(namaMurid);
+
+      // 2. const user = {
+      //   nama: 'Danny',
+      //   umur: 20,
+      //   kota: 'Badung',
+      // };
+
+      // const key = Object.keys(user);
+      // {
+      //   console.log(user);
+      // }
+
+      // const value = Object.values(user);
+      // console.log(key);
+
+      // const entrie = Object.entries(user);
+      // console.log(entrie);
+
+      // const arr = [
+      //   ['nama', 'Danny'],
+      //   ['umur', 20],
+      //   ['kota', 'Badung'],
+      // ];
+
+      // const fromEntrie = Object.fromEntries(arr);
+      // console.log(fromEntrie);
+
+      // const user = { nama: 'Danny', umur: 20 };
+      // const info = { kota: 'Badung', hobi: 'ngoding' };
+
+      // const dataLengkap = Object.assign({}, user, info);
+      // {
+      //   console.log(dataLengkap);
+      // }
+      // const dataLengkap = { ...user, ...info };
+      // console.log(dataLengkap);
+
+      // 3. const produk = [
+      //   { nama: 'Laptop', harga: 15000000 },
+      //   { nama: 'Mouse', harga: 200000 },
+      //   { nama: 'Keyboard', harga: 500000 },
+      //   { nama: 'vga', harga: 200000 },
+      //   { nama: 'monitor', harga: 700000 },
+      // ];
+
+      // const barangMahal = produk.filter((n) => n.harga >= 300000);
+      // console.log(barangMahal);
+
+      // const namaBarang = barangMahal.map((n) => n.nama);
+      // console.log(namaBarang);
+
+      // const totalHarga = barangMahal.reduce((a, b) => a + b.harga, 0);
+      // console.log(totalHarga);
+
+      // const nama = Object.values(produk);
+      // console.log(nama);
+
+      // const user = { nama: 'budi' };
+      // const { nama, umur = 18 } = user;
+      // console.log(nama, umur);
+
+      // 4.const dataSiswa = { info: { nama: 'sony', umur: 28, alamat: { kota: 'denpasar', provinsi: 'bali' } } };
+      // const {
+      //   info: { umur, nama },
+      // } = dataSiswa;
+      // console.log(umur, nama);
+
+      //   const dataOrang = { profile: { nama: 'memek', umur: 20 } };
+      //   console.log(dataOrang.profile.nama);
+
+      // function tampilkanAngka(a, b) {
+      //   return a + b;
+      // }
+      // console.log(tampilkanAngka(5, 10));
+
+      // const angka = function (a, b) {
+      //   return a + b;
+      // };
+      // console.log(angka(50, 20));
+
+      // const greet = (nama) => {
+      //   return `halo, ${nama}`;
+      // };
+      // console.log(greet('deny'));
+
+      // function luasPersegi(sisi, sisi, sisi) {
+      //   return sisi * sisi * sisi;
+      // }
+      // console.log(luasPersegi(6, 7, 8));
+
+      // function hitung() {
+      //   let angka = 10;
+
+      //   function tambahSatu() {
+      //     tambah = angka + 1;
+      //     return tambah;
+      //   }
+      //   return tambahSatu();
+      // }
+      // console.log(hitung());
+
+      // function jumlah() {
+      //   let angka = 20;
+
+      //   function tambahLagi() {
+      //     tambah = angka + 30;
+      //     return tambah;
+      //   }
+      //   return tambahLagi();
+      // }
+      // console.log(jumlah());
     </script>
   </body>
 </html>
