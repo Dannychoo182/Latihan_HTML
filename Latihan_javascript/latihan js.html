@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>belajar js lanjutan lagi</title>
+  </head>
+  <body>
+    <script>
+      // function hitung(a, b, callback) {
+      //   let jumlah = a + b;
+      //   callback(jumlah);
+      // }
+      // hitung(5, 8, function (total) {
+      //   console.log(`total perhitungan ${total}`);
+      // });
+
+      // function sapa(nama) {
+      //   console.log(`hallo ${nama}`);
+      // }
+      // function teman(callback) {
+      //   let orang = 'danny';
+      //   callback(orang);
+      // }
+      // teman(sapa);
+
+      // (function () {
+      //   console.log(`hallo semuanya`);
+      // })();
+
+      // function kali(a) {
+      //   return function (b) {
+      //     return a * b;
+      //   };
+      // }
+      // const jumlah = kali(3);
+      // console.log(jumlah(5));
+
+      // function Person(name, age) {
+      //   this.name = name;
+      //   this.age = age;
+      //   this.sayHallo = function () {
+      //     console.log(`hallo nama saya ${this.name} dan umur saya ${this.umur}`);
+      //   };
+      // }
+      // const siswa1 = new Person(`danny`, 20);
+      // const siswa2 = new Person(`tomy`, 21);
+      // const siswa3 = new Person(`ronggo`, 21);
+
+      // siswa1.sayHallo();
+      // siswa2.sayHallo();
+      // siswa3.sayHallo();
+
+      // function car(brand, color, speed) {
+      //   this.brand = brand;
+      //   this.color = color;
+      //   this.speed = speed;
+      //   this.drive = function () {
+      //     console.log(`Mobil ${this.brand} yang berwarna ${this.color} dan mempunya kecepatan ${this.speed} km/h `);
+      //   };
+      // }
+      // const mobil1 = new car('avanza', 'merah', 150);
+      // const mobil2 = new car('brio', 'kuning', 120);
+
+      // mobil1.drive();
+      // mobil2.drive();
+
+      ///////////////////////////////////////////////////
+
+      // function Car(brand, color, speed) {
+      //   this.brand = brand;
+      //   this.color = color;
+      //   this.speed = speed;
+      // }
+      // Car.prototype.drive = function () {
+      //   console.log(`mobil ${this.brand} berwana ${this.color} sedang melaju dengan kecepatan ${this.speed} km/h`);
+      // };
+      // const mobil1 = new Car('brio', 'biru', 150);
+      // const mobil2 = new Car('honda', 'hijau', 250);
+
+      // mobil1.drive();
+      // mobil2.drive();
+      // console.log(mobil1 instanceof Car);
+
+      // console.log(Object.getPrototypeOf(mobil1));
+      // console.log(Object.getPrototypeOf(Car.prototype));
+
+      ///////////////////////////////////////////////////////////
+
+      // class Car {
+      //   constructor(brand, color, speed) {
+      //     this.brand = brand;
+      //     this.color = color;
+      //     this.speed = speed;
+      //   }
+      //   driver() {
+      //     console.log(`mobil ${this.brand} yang berwarna ${this.color} ini melaju dengan kecepatan ${this.speed} km/h`);
+      //   }
+      // }
+      // // const mobil1 = new Car('lamborgini', 'putih', 200);
+      // // mobil1.driver();
+
+      // class ElectricCar extends Car {
+      //   constructor(brand, color, speed, battreylevel) {
+      //     super(brand, color, speed);
+      //     this.battreylevel = battreylevel;
+      //   }
+      //   change() {
+      //     console.log(`dan mobil ${this.brand} ini, sedang mengisi battrey . . . ${this.battreylevel}%`);
+      //   }
+      // }
+      // const electricMobil1 = new ElectricCar('Lamborgini', 'merah', 200, 85);
+      // const electricMobil2 = new ElectricCar('avanza', 'merah', 200, 89);
+      // electricMobil1.driver();
+      // electricMobil1.change();
+      // electricMobil2.driver();
+      // electricMobil2.change();
+
+      // console.log(electricMobil1 instanceof ElectricCar);
+      // console.log(electricMobil1 instanceof Car);
+      // console.log(electricMobil1 instanceof Object);
+
+      ////////////////////////////////////////////////////////////////////
+
+      // class Car {
+      //   constructor(brand, speed) {
+      //     this.brand = brand;
+      //     this._speed = speed;
+      //   }
+      //   get speed() {
+      //     return `${this._speed} km/h`;
+      //   }
+      //   set speed(value) {
+      //     if (value > 300) {
+      //       console.log('kecepatan anda terlalu tinggi!!');
+      //     } else {
+      //       this._speed = value;
+      //     }
+      //   }
+      // }
+      // const mobil = new Car('Aston Martin', 250);
+      // console.log(mobil.speed);
+
+      // mobil.speed = 340;
+      // mobil.speed = 200;
+      // console.log(mobil.speed);
+
+      ///////////////////////////////////////////////////////////////////////
+      function Car(brand, color, speed) {
+        this.brand = brand;
+        this.color = color;
+        this.speed = speed;
+      }
+      Car.prototype.drive = function () {
+        console.log(`mobil ${this.brand} berwana ${this.color} sedang melaju dengan kecepatan ${this.speed} km/h`);
+      };
+      const mobil1 = new Car('brio', 'biru', 150);
+      const mobil2 = new Car('honda', 'hijau', 250);
+
+      mobil1.drive();
+      mobil2.drive();
+      console.log(mobil1 instanceof Car);
+
+      console.log(Object.getPrototypeOf(mobil1));
+      console.log(Object.getPrototypeOf(Car.prototype));
+
+      class Motor extends Car {
+        constructor() {}
+      }
+    </script>
+  </body>
+</html>

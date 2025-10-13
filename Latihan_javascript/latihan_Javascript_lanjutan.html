@@ -1052,16 +1052,80 @@
       //   console.log(`hasil penjjumlahan : ${jumlah}`);
       // });
 
-      function halo(nama) {
-        console.log(`Halo, ${nama}!`);
-      }
+      // function halo(nama) {
+      //   console.log(`Halo, ${nama}!`);
+      // }
 
-      function prosesUser(callback) {
-        const user = 'Danny';
-        callback(user);
-      }
+      // function prosesUser(callback) {
+      //   const user = 'Danny';
+      //   callback(user);
+      // }
 
-      prosesUser(halo);
+      // prosesUser(halo);
+      // function penghitungan() {
+      //   let angka = 0;
+
+      //   function tambah() {
+      //     angka++;
+      //     console.log(angka);
+      //   }
+      //   return tambah;
+      // }
+      // const jumlah = penghitungan();
+      // jumlah();
+      // jumlah();
+
+      // function salam(name) {
+      //   return function () {
+      //     console.log(`hallo: ${name} `);
+      //   };
+      // }
+      // const sapaSaya = salam('danny');
+      // sapaSaya();
+
+      // function halo(nama) {
+      //   console.log(`hallo ${nama}!`);
+      // }
+      // function proses(callback) {
+      //   const user = 'danny';
+      //   callback(user);
+      // }
+
+      // proses(halo);
+
+      // function hitung(a, b, callback) {
+      //   const hasil = a + b;
+      //   callback(hasil);
+      // }
+      // hitung(6, 8, function (total) {
+      //   console.log(`hasil : ${total}`);
+      // });
+
+      // function jumlah(a, b, callback) {
+      //   const hasil = a + b;
+      //   callback(hasil);
+      // }
+      // jumlah(10, 20, function (keseluruhan) {
+      //   console.log(`total keseluruhan ${keseluruhan}`);
+      // });
+
+      // function halo(nama) {
+      //   console.log(`hallo ${nama}!`);
+      // }
+      // function proses(callback) {
+      //   const user = 'danny';
+      //   callback(user);
+      // }
+
+      // proses(halo);
+
+      function sayHallo(callback) {
+        let sapa = 'hallo!';
+        callback(sapa);
+      }
+      sayHallo((pesan) => {
+        console.log(pesan, 'Selamat datang di JavaScript!');
+      });
     </script>
   </body>
 </html>
