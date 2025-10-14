@@ -146,27 +146,142 @@
       // console.log(mobil.speed);
 
       ///////////////////////////////////////////////////////////////////////
-      function Car(brand, color, speed) {
-        this.brand = brand;
-        this.color = color;
-        this.speed = speed;
+
+      // function Car(brand, color, speed) {
+      //   this.brand = brand;
+      //   this.color = color;
+      //   this.speed = speed;
+      // }
+      // Car.prototype.drive = function () {
+      //   console.log(`mobil ${this.brand} berwana ${this.color} sedang melaju dengan kecepatan ${this.speed} km/h`);
+      // };
+      // const mobil1 = new Car('brio', 'biru', 150);
+      // const mobil2 = new Car('honda', 'hijau', 250);
+
+      // mobil1.drive();
+      // mobil2.drive();
+      // console.log(mobil1 instanceof Car);
+
+      // console.log(Object.getPrototypeOf(mobil1));
+      // console.log(Object.getPrototypeOf(Car.prototype));
+
+      // class Motor extends Car {
+      //   constructor(brand, color, speed, type) {
+      //     super(brand, color, speed);
+      //     this.type = type;
+      //   }
+      //   wheelie() {
+      //     console.log(`motor ${this.brand} yang berwarna ${this.color} ini sedang melaju dengan kecepatan ${this.speed} km/h, dan nama motornya adalah ${this.type}`);
+      //   }
+      // }
+      // const motor1 = new Motor('suzuki', 'hitam', 200, 'ninja 250R');
+      // motor1.wheelie();
+
+      ////////////////////////////////////////////////////////////////////////////
+
+      // class User {
+      //   #Balance;
+      //   constructor(name, balance) {
+      //     this.name = name;
+      //     this.#Balance = balance;
+      //   }
+      //   deposit(amount) {
+      //     this.#Balance += amount;
+      //   }
+      //   withdraw(minus) {
+      //     if (minus > this.#Balance) {
+      //       console.log('saldo anda tidak cukup');
+      //     }
+      //     this.#Balance -= minus;
+      //   }
+      //   getBalance() {
+      //     return this.#Balance;
+      //   }
+      // }
+      // const nama1 = new User('danny', 1000);
+      // nama1.deposit(2000);
+      // nama1.deposit(150000);
+      // nama1.withdraw(6000);
+
+      // console.log(nama1.getBalance());
+
+      ///////////////////////////////////////////////////////////////////
+
+      // class Vehicle {
+      //   move() {
+      //     console.log('mobil ini sedang berjalan di jalan raya');
+      //   }
+      // }
+      // class Motor extends Vehicle {
+      //   move() {
+      //     console.log('motor ini sedang melaju kencang');
+      //   }
+      // }
+
+      // class Pesawat extends Vehicle {
+      //   move() {
+      //     console.log('pesawat ini sedang lepas landas');
+      //   }
+      // }
+      // const vehicles = [new Vehicle(), new Motor(), new Pesawat()];
+      // vehicles.forEach((v) => v.move());
+
+      /////////////////////////////////////////////////////////////////////////////////
+
+      // class Payment {
+      //   pay() {
+      //     throw new Error('harus di siskan terlebih dahulu');
+      //   }
+      // }
+      // class CreditCardPayment extends Payment {
+      //   pay() {
+      //     console.log('pembayaran dengan credit card');
+      //   }
+      // }
+      // class CryptoPayment extends Payment {
+      //   pay() {
+      //     console.log('pembayaran dengan cypto payment');
+      //   }
+      // }
+      // const Pembayaran = [new CreditCardPayment(), new CryptoPayment()];
+      // Pembayaran.forEach((v) => v.pay());
+
+      ///////////////////////////////////////////////////////////////
+
+      // class Pengguna {
+      //   constructor(nama, umur) {
+      //     this.nama = nama;
+      //     this.umur = umur;
+      //   }
+
+      //   sayHallo() {
+      //     console.log(`hallo nama saya ${this.nama}`);
+      //   }
+      //   static dewasa(age) {
+      //     return age >= 18;
+      //   }
+      // }
+      // const user1 = new Pengguna('danny', 20);
+      // user1.sayHallo();
+      // console.log(Pengguna.dewasa(20));
+
+      /////////////////////////////////////////////////////////////////////
+
+      function downloadFile(url, callback) {
+        console.log(`📥 Mulai download dari ${url}`);
+        setTimeout(() => {
+          const data = '💾 Data berhasil diunduh!';
+          console.log(`✅ Download selesai dari ${url}`);
+          callback(data); // panggil callback dengan data hasil download
+        }, 3000);
       }
-      Car.prototype.drive = function () {
-        console.log(`mobil ${this.brand} berwana ${this.color} sedang melaju dengan kecepatan ${this.speed} km/h`);
-      };
-      const mobil1 = new Car('brio', 'biru', 150);
-      const mobil2 = new Car('honda', 'hijau', 250);
 
-      mobil1.drive();
-      mobil2.drive();
-      console.log(mobil1 instanceof Car);
-
-      console.log(Object.getPrototypeOf(mobil1));
-      console.log(Object.getPrototypeOf(Car.prototype));
-
-      class Motor extends Car {
-        constructor() {}
+      function showData(hasil) {
+        console.log('📡 Data sudah diterima:', hasil);
       }
+
+      // panggil fungsi utama
+      downloadFile('https://example.com/file.zip', showData);
     </script>
   </body>
 </html>
