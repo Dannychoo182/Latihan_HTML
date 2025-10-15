@@ -267,21 +267,125 @@
 
       /////////////////////////////////////////////////////////////////////
 
-      function downloadFile(url, callback) {
-        console.log(`📥 Mulai download dari ${url}`);
-        setTimeout(() => {
-          const data = '💾 Data berhasil diunduh!';
-          console.log(`✅ Download selesai dari ${url}`);
-          callback(data); // panggil callback dengan data hasil download
-        }, 3000);
-      }
+      // function downloadFile(url, callback) {
+      //   console.log(`📥 Mulai download dari ${url}`);
+      //   setTimeout(() => {
+      //     const data = '💾 Data berhasil diunduh!';
+      //     console.log(`✅ Download selesai dari ${url}`);
+      //     callback(data); // panggil callback dengan data hasil download
+      //   }, 3000);
+      // }
 
-      function showData(hasil) {
-        console.log('📡 Data sudah diterima:', hasil);
-      }
+      // function showData(hasil) {
+      //   console.log('📡 Data sudah diterima:', hasil);
+      // }
 
-      // panggil fungsi utama
-      downloadFile('https://example.com/file.zip', showData);
+      // // panggil fungsi utama
+      // downloadFile('https://example.com/file.zip', showData);
+
+      /////////////////////////////////////////////////////////////////////////////////////
+
+      // function download(url, callback) {
+      //   console.log('mohon tunggu data sedang di unduh !!!!');
+      //   setTimeout(() => {
+      //     const data = 'data berhasil di unduh !!!';
+      //     console.log(`ini dia datanya, data sedang di proses ${url}`);
+      //     callback(data);
+      //   }, 3000);
+      // }
+      // function fullData(hasil) {
+      //   console.log(`data sudah di terima`, hasil);
+      // }
+      // download(`https://www.google.com`, fullData);
+
+      //////////////////////////////////////////////////////////////////////////////////
+
+      // function getUserData(data) {
+      //   return new Promise((resolve, reject) => {
+      //     console.log('mengambil data siswa');
+      //     setTimeout(() => {
+      //       const success = true;
+      //       if (success) {
+      //         resolve('data siswa sudah di terima');
+      //       } else {
+      //         reject('data gagal di unduh');
+      //       }
+      //     }, 2000);
+      //   });
+      // }
+
+      // getUserData({ name: 'Danny', age: 21 })
+      //   .then((result) => {
+      //     console.log(result);
+      //     return 'file sedang di unduh';
+      //   })
+      //   .then((processMsg) => {
+      //     console.log(processMsg);
+      //     return 'data berhasil di simpan di database';
+      //   })
+      //   .then((finalMsg) => {
+      //     console.log(finalMsg);
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
+
+      /////////////////////////////////////////////////////////////////
+
+      // function userData(data) {
+      //   return new Promise((resolve, reject) => {
+      //     console.log('data sedang di unduh...!!');
+      //     setTimeout(() => {
+      //       const success = true;
+      //       if (success) {
+      //         resolve('data berhasil di ambil');
+      //       } else {
+      //         reject('data gagal di unduh');
+      //       }
+      //     }, 2000);
+      //   });
+      // }
+
+      // async function main() {
+      //   try {
+      //     const siswa = await userData();
+      //     console.log(siswa);
+
+      //     const proses = 'memproses file siswa';
+      //     console.log(proses);
+
+      //     const simpan = 'simpan data siswa';
+      //     console.log(simpan);
+      //   } catch (error) {
+      //     console.log(error);
+      //   }
+      // }
+      // main();
+
+      // function downloadFile(namaFile, waktu) {
+      //   return new Promise((resolve, reject) => {
+      //     console.log(`Mulai mengunduh file ${namaFile}...!!`);
+      //     setTimeout(() => {
+      //       const success = Math.random() > 0.1;
+      //       if (success) {
+      //         resolve('Selamat data berhasil di simpan');
+      //       } else {
+      //         reject('data gagal di unduh');
+      //       }
+      //     }, waktu);
+      //   });
+      // }
+
+      async function mainData() {
+        try {
+          const data = await Promise.all([downloadFile(' data.jpeg', 2000), downloadFile(' data penduduk', 3000), downloadFile('data siswa', 1000)]);
+          console.log('semua file berhasil di unduh');
+          console.log(data);
+        } catch (error) {
+          console.log('ada file yang gagal', error);
+        }
+      }
+      mainData();
     </script>
   </body>
 </html>
