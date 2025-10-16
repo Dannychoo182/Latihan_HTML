@@ -1,0 +1,50 @@
+:root {
+  --light-bg: linear-gradient(135deg, #74b9ff, #0984e3);
+  --dark-bg: linear-gradient(135deg, #2d3436, #000);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.5s ease;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.error {
+  color: #ff7675;
+  font-weight: bold;
+}
+
+/* 🌙 Dark & Light mode */
+body.light-mode {
+  background: var(--light-bg);
+  color: #fff;
+}
+
+body.dark-mode {
+  background: var(--dark-bg);
+  color: #fff;
+}
+
+/* ⏳ Spinner */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+}
