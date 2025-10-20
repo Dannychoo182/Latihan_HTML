@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan DOM</title>
+    <style>
+      /* :root {
+        --bg: #fff;
+        --text: #000;
+      }
+      .dark {
+        --bg: #111;
+        --text: #eee;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+      } */
+    </style>
+  </head>
+  <body>
+    <h1 id="judul">Halo Dunia!</h1>
+    <p class="text">Saya sedang belajar JavaScript DOM.</p>
+    <button id="ubah">Ubah Teks</button>
+
+    <!--  -->
+
+    <ul id="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+
+    <!--  -->
+
+    <button id="toggle">Toggle Dark</button>
+
+    <!--  -->
+
+    <div id="card" class="box selected"></div>
+
+    <!--  -->
+
+    <ul id="nav">
+      <li class="nav-item">Home</li>
+      <li class="nav-item">About</li>
+      <li class="nav-item">Contact</li>
+    </ul>
+
+    <!--  -->
+
+    <img id="logo" src="logo.png" alt="Logo utama" />
+
+    <!--  -->
+
+    <script>
+      // const tombol = document.getElementById('judul');
+      // const teks = document.querySelector('.text');
+
+      // tombol.addEventListener('click', function () {
+      //   alert('text ini akan berubah menjadi biru');
+      //   teks.textContent = 'Teks ini berubah setelah tombol diklik!';
+      //   teks.style.color = 'red';
+      //   tombol.style.color = 'blue';
+      // });
+      //////////////////////////////////////////////
+
+      // const items = document.querySelectorAll('#menu li');
+
+      // items.forEach((item) => {
+      //   item.addEventListener('click', function () {
+      //     // hapus warna semua item
+      //     items.forEach((i) => (i.style.color = 'black'));
+      //     // beri warna hanya ke item yang diklik
+      //     this.style.color = 'red';
+      //   });
+      // });
+
+      ////////////////////////////////////////////////
+
+      // const btn = document.getElementById('toggle');
+      // btn.addEventListener('click', () => {
+      //   document.documentElement.classList.toggle('dark'); // bisa juga body
+      // });
+
+      ///////////////////////////////////////////////////////
+
+      // const card = document.getElementById('card');
+      // console.log(card.classList);
+      // card.classList.add('active', 'highlight');
+      // card.classList.remove('active');
+      // card.classList.contains('active');
+      // card.classList.replace('highlight', 'newclass');
+
+      // replace lebih aman dari add atau remove
+
+      ///////////////////////////////////////////////////////////////////
+
+      // const nav = document.getElementById('nav');
+      // nav.addEventListener('click', (e) => {
+      //   const item = e.target.closest('.nav-item');
+      //   if (!item) return;
+      //   // hapus active dari semua sibling
+      //   nav.querySelectorAll('.nav-item').forEach((i) => i.classList.remove('active'));
+      //   item.classList.add('active');
+      // });
+
+      ///////////////////////////////////////////////////////////////////////////
+    </script>
+  </body>
+</html>

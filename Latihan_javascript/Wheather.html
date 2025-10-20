@@ -66,7 +66,7 @@
           <p class="mt-2">Mengambil data cuaca...</p>
         `;
 
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=Singaraja,id&appid=1a25d1a58696319ac13360f49c14a2eb&units=metric&lang=id`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},id&appid=1a25d1a58696319ac13360f49c14a2eb&units=metric&lang=id`;
 
         try {
           const response = await fetch(url);
@@ -91,7 +91,7 @@
             </div>
           `;
         } catch (error) {
-          resultDiv.innerHTML = `<p class="error">❌ Error: ${error.message}</p>`;
+          resultDiv.innerHTML = `<p class="error"> Error: ${error.message}</p>`;
         }
       }
     </script>
