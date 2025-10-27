@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Latihan DOM</title>
     <style>
-      /* :root {
+      :root {
         --bg: #fff;
         --text: #000;
       }
@@ -16,7 +16,7 @@
       body {
         background: var(--bg);
         color: var(--text);
-      } */
+      }
     </style>
   </head>
   <body>
@@ -54,58 +54,58 @@
     <!--  -->
 
     <script>
-      // const tombol = document.getElementById('judul');
-      // const teks = document.querySelector('.text');
+      const tombol = document.getElementById('judul');
+      const teks = document.querySelector('.text');
 
-      // tombol.addEventListener('click', function () {
-      //   alert('text ini akan berubah menjadi biru');
-      //   teks.textContent = 'Teks ini berubah setelah tombol diklik!';
-      //   teks.style.color = 'red';
-      //   tombol.style.color = 'blue';
-      // });
-      // ////////////////////////////////////////////
+      tombol.addEventListener('click', function () {
+        alert('text ini akan berubah menjadi biru');
+        teks.textContent = 'Teks ini berubah setelah tombol diklik!';
+        teks.style.color = 'red';
+        tombol.style.color = 'blue';
+      });
+      ////////////////////////////////////////////
 
-      // const items = document.querySelectorAll('#menu li');
+      const items = document.querySelectorAll('#menu li');
 
-      // items.forEach((item) => {
-      //   item.addEventListener('click', function () {
-      //     // hapus warna semua item
-      //     items.forEach((i) => (i.style.color = 'black'));
-      //     // beri warna hanya ke item yang diklik
-      //     this.style.color = 'red';
-      //   });
-      // });
+      items.forEach((item) => {
+        item.addEventListener('click', function () {
+          // hapus warna semua item
+          items.forEach((i) => (i.style.color = 'black'));
+          // beri warna hanya ke item yang diklik
+          this.style.color = 'red';
+        });
+      });
 
-      // //////////////////////////////////////////////
+      //////////////////////////////////////////////
 
-      // const btn = document.getElementById('toggle');
-      // btn.addEventListener('click', () => {
-      //   document.documentElement.classList.toggle('dark'); // bisa juga body
-      // });
+      const btn = document.getElementById('toggle');
+      btn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark'); // bisa juga body
+      });
 
-      // /////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////
 
-      // const card = document.getElementById('card');
-      // console.log(card.classList);
-      // card.classList.add('active', 'highlight');
-      // card.classList.remove('active');
-      // card.classList.contains('active');
-      // card.classList.replace('highlight', 'newclass');
+      const card = document.getElementById('card');
+      console.log(card.classList);
+      card.classList.add('active', 'highlight');
+      card.classList.remove('active');
+      card.classList.contains('active');
+      card.classList.replace('highlight', 'newclass');
 
-      // replace lebih aman dari add atau remove
+      replace lebih aman dari add atau remove
 
-      // /////////////////////////////////////////////////////////////////
+      /////////////////////////////////////////////////////////////////
 
-      // const nav = document.getElementById('nav');
-      // nav.addEventListener('click', (e) => {
-      //   const item = e.target.closest('.nav-item');
-      //   if (!item) return;
-      //   // hapus active dari semua sibling
-      //   nav.querySelectorAll('.nav-item').forEach((i) => i.classList.remove('active'));
-      //   item.classList.add('active');
-      // });
+      const nav = document.getElementById('nav');
+      nav.addEventListener('click', (e) => {
+        const item = e.target.closest('.nav-item');
+        if (!item) return;
+        // hapus active dari semua sibling
+        nav.querySelectorAll('.nav-item').forEach((i) => i.classList.remove('active'));
+        item.classList.add('active');
+      });
 
-      /////////////////////////////////////////////////////////////////////////
+      ///////////////////////////////////////////////////////////////////////
     </script>
   </body>
 </html>
